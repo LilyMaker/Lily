@@ -5,7 +5,7 @@ const path = require('path');
 const mime = require('mime');
 
 // 设置静态文件目录和允许列出目录的路径
-const staticDir = './public';
+const staticDir = './';
 const browseableDirs = [staticDir];
 
 // 创建HTTP服务器
