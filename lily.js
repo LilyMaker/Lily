@@ -2,7 +2,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const mime = require('mime');
+import mime from 'mime';
 
 // 设置静态文件目录和允许列出目录的路径
 const staticDir = './';
