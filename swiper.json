@@ -1,0 +1,26 @@
+{
+    "list3":[
+        {
+            "formal":true,
+            "icon":"https://s11.ax1x.com/2023/12/31/piXFDLd.png",
+            "url":"http://121.196.198.133:8080/Lily浏览器.apk",
+            "type":"picture",
+            "txt":"更新"
+        }
+    ],
+    "list":[
+        {
+            "formal":true,
+            "icon":"https://pic4.zhimg.com/v2-666eb28ba8e686a26ae7295cd6a2a47a_r.jpg",
+            "url":"https://picst.sunbangyan.cn/2023/11/07/b34a628f479d66f831c63f440242823d.png",
+            "type":"picture",
+            "txt":"广告位招租1"
+        },{
+            "formal":true,
+            "icon":"https://wallpaperm.cmcm.com/9655cfa8c58487380493c671b8daa038.jpg",
+            "url":"https://picst.sunbangyan.cn/2023/11/07/b34a628f479d66f831c63f440242823d.png",
+            "type":"picture",
+            "txt":"广告位招租2"
+        }
+    ]
+}
