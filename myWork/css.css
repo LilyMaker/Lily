@@ -2,10 +2,12 @@
     font-size: 20px;
 }
 pre{
-    width: 100%;
-    white-space: pre-wrap;
+  width: 100%;
+  white-space: pre-wrap;
   white-space: -moz-pre-wrap;
   white-space: -pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
+  overflow: auto;
+  height: 1080px;
 }
