@@ -1,0 +1,27 @@
+.authi,.avatar{
+    display: none !important;
+}
+[id^="comment_"] {
+    display: none !important;
+}
+[id^="ratelog_"] {
+    display: none !important;
+}
+.psth.xs1 {
+    display: none !important;
+}
+.threadlist_foot.cl{
+    display: none !important;
+}
+.foot.foot_reply.flex-box.cl{
+    display: none !important;
+}
+.txtlist.cl{
+    display: none !important;
+}
+.wp.cl{
+    display: none !important;
+}
+/* [id^="pid"]{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5)  !important;
+} */
