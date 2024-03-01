@@ -87,6 +87,7 @@ const api="https://lily-seven.vercel.app";
 const readModel=api+'/myWork/Yuri300.css';
 const js=api+'/myWork/yuri300.js';
 const start=function(){
+     alert(document.URL.indexOf("bbs.yamibo.com"));
    if(document.URL.indexOf("bbs.yamibo.com")>=0){
     loadCss(api+"/myWork/Yuri300Main.css");
     loadScript(js);
