@@ -65,7 +65,6 @@ window.goRead=function(){
     let query=queryParamsObject.map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
     .join('&');
     let go="https://"+url.host+"?"+query; 
-    alert(go);
     window.location.href=go;
    
     
@@ -84,10 +83,11 @@ function hook(){
         }); 
     }
 }
-const api="http://127.0.0.1:5500";
+const api="https://lily-seven.vercel.app";
 const readModel=api+'/myWork/Yuri300.css';
 const js=api+'/myWork/yuri300.js';
 const start=function(){
+   if(document.URL.indexOf("bbs.yamibo.com")>=0){
     loadCss(api+"/myWork/Yuri300Main.css");
     loadScript(js);
     loadCss(api+"/myWork/nav.css");
@@ -114,7 +114,7 @@ const start=function(){
             style:" color: white !important;font-size: 20px !important ;"
         }
     ) 
-   
     hook();
+   }
 }
 start();
