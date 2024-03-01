@@ -83,7 +83,7 @@ function hook(){
         }); 
     }
 }
-const api="https://lily-fsgyltb65-lilys-projects-c83145e2.vercel.app";
+const api="https://whimsical-platypus-73f612.netlify.app";
 const readModel=api+'/myWork/Yuri300.css';
 const js=api+'/myWork/yuri300.js';
 const start=function(){
