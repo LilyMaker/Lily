@@ -1,0 +1,35 @@
+*{
+    /* background-color: transparent !important; */
+    /* color: #000 !important; */
+    min-width: 0 !important;
+}
+body{
+    width: 100%  !important;
+    /* background: rgb(131,58,180); */
+    /* background: linear-gradient(90deg, #F9F871 0%, #FFE8F7 50%, #FFDFCA 100%) !important; */
+}
+.wp{
+    width: 100% !important;
+    border-radius: 10px;
+    /* background-color: white !important ; */
+    margin-bottom:20px ;
+    margin-top: 10px;
+}
+#chart,#pt,#mn_N520f,#mn_N12a7,#switchwidth,.nvv.z,.nvvext,#online,.bm.lk
+,.fl_icn,.fl_i,.fl_by,table > tbody > tr> td> p
+{
+    display: none !important;
+}
+[id^="favatar"]{
+    display: none !important;
+}
+.pls{
+    display: none !important;
+}
+[id^="aimg"]{
+    max-width: 100%;
+}
+#pgt{
+    display: none !important;
+}
+

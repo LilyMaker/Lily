@@ -1,0 +1,80 @@
+*{
+    max-width: 100% !important;
+}
+#postlist > table:nth-child(1) > tbody > tr > td.plc.ptm.pbn.vwthd > div.y{
+    display: none !important;
+}
+#viewui_fontsize {
+    float: none !important;
+}
+.vwthd {
+    padding-right: 0px!important;
+}
+/* 回复 */
+#fwin_reply{
+    width: 100% !important;
+    left: 0px;
+    top: 50%;
+}
+.m_c .tedt{
+    width: 100% !important;
+} 
+#floatlayout_reply > div.p_c{
+    width: 95% !important;
+
+}
+#subjecthide{
+    float: none;
+    width: 50% !important;
+}
+#fastpostsml_menu{
+    width: 100% !important;
+    
+}
+
+#fastpostsmiliesdiv_table {
+   
+    table-layout: fixed; /* 这会让表格根据指定列宽进行分配，而不是根据内容自动调整 */
+}
+#fastpostsmiliesdiv_table td {
+    word-wrap: break-word; /* 在长单词或URL地址处强制换行 */
+    overflow-wrap: break-word; /* 现代浏览器中的等价于word-wrap属性 */
+    white-space: normal; /* 允许内容包含正常的空格和换行符 */
+    
+    /* 指定一个最大宽度，当内容宽度超过这个值时会换行 */
+    max-width: your_desired_width;
+}
+  
+  /* 如果tbody需要特定样式，尽管通常不需要针对tbody设置这些属性 */
+#fastpostsmiliesdiv_table tbody tr {
+    /* 不直接控制td换行，但可以控制整体行的样式 */
+}
+#scrolltop{
+    right: 0px !important;
+    bottom: 50% !important;
+    z-index: 99999; /* 确保它显示在最顶层 */
+    visibility: visible !important;
+    background-color: transparent !important;
+    border: 0px solid transparent !important;
+}
+#threadindex{
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height:100%;
+  max-height: calc(100vh);
+  width: 100%;
+  overflow-y: auto;
+  z-index: 100; 
+  background-color: white !important;
+}
+#threadindex .tindex h3{
+  background-color: aqua;
+}
+/* 手机模式 */
+.header h2{
+    text-align:inherit;
+    width: auto;
+}

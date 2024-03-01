@@ -1,4 +1,4 @@
-.authi,.avatar{
+/* .authi,.avatar{
     display: none !important;
 }
 [id^="comment_"] {
@@ -21,7 +21,65 @@
 }
 .wp.cl{
     display: none !important;
-}
+} */
 /* [id^="pid"]{
     border-bottom: 1px solid rgba(0, 0, 0, 0.5)  !important;
 } */
+
+
+#wp,#ft{
+    /* box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5); */
+}
+.tit{
+    border-bottom: 2px solid #FFE8F7;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+
+.imgbox, .listbox,.catenew  {
+    height: auto;
+    margin-bottom: 0;
+    overflow: visible;
+    float:none;
+    width: auto;
+    border: 0px;
+}
+.nvv.z{
+    
+}
+
+.table{
+    color: #000 !important;
+}
+.fl_row td {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+table > tbody > tr > td >h2{
+     font-size: 20px;
+     color: white !important;
+}
+table{
+    border-collapse:initial;
+    background-color: transparent !important;
+    color: white !important;
+    padding: 20px !important;
+    border-radius: 10px;
+}
+.listbox .module.xl1 li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+   
+}
+#portal_block_51_content > div.module.cl.xl.xl1 > ul{
+    padding-left:30px ;
+    padding-right:30px ;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.xl em{
+    float: none;
+    color: rgba(0, 0, 0, 0.5) !important;
+}

@@ -1,0 +1,21 @@
+.content{
+    height: auto;
+    overflow: inherit;
+    
+}
+#imgbox,.listbox{
+    width: auto;
+    height: auto;
+    overflow: inherit;
+    float: none;
+}
+.catenew.cl{
+    height: auto;
+}
+.xl em{
+    float: none;
+
+}
+#ft{
+    display: none;
+}

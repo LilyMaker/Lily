@@ -1,0 +1,33 @@
+#search_mid{
+    /* box-shadow: 0 0 1px 1px rgb(0,0,0,0.1); */
+    width: 100%;
+}
+#hd .wp{
+    display: none !important;
+    border-radius: 10px;
+}
+#scbar_form{
+    width:100%;
+    padding-bottom: 0;
+    position: initial;
+    top: 0;
+    left: 0;
+    transform: none;
+}
+.header-tool.y{
+    float: none;
+    width: 100%;
+}
+
+#scbar_txt{
+    border: 0px solid transparent;
+    width: 60%;
+}
+.oyheader{
+    position:static;
+    width: 100%;
+    .wp.cl{
+        /* box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5); */
+        margin: 0px auto;
+    }
+}
