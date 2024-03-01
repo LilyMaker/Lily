@@ -111,7 +111,7 @@ const start=function(){
             type:"a",
             href:"javascript:window.goRead();",
             textContent:"阅读模式",
-            style:" color: white !important;font-size: 20px !important ;"
+            style:" color: white !important;"
         }
     ) 
     hook();
