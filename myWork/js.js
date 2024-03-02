@@ -41,15 +41,36 @@ function push(id,child){
 }
 window.memu=function(){
     let e= document.getElementById("threadindex");
-    push(
+    if(!e){
+        alert("没有找到菜单");
+        return;
+    }
+    (e.style.display=e.style.display=="block"? "none":"block");
+    if(!document.getElementById("last")){
+       push(
         "#threadindex > div > h3",
         {
             type:"div",
             textContent:"上次看到:"+localStorage.getItem('上次看到'),
-            style:" color: red !important;font-size: 20px !important ;"
+            style:" color: red !important;font-size: 20px !important ;",
+            id:"last"
         }
-    ) 
-    e.style.display=e.style.display=="block"? "none":"block";
+        )  
+    }
+    let lastTimeId="lastTime"+Date.now();
+    document.querySelectorAll("#threadindex li").forEach(function(element) {
+        if (element.textContent==localStorage.getItem('上次看到')) {
+            element.id=lastTimeId;
+            element.style.backgroundColor="aqua";
+        }
+    }); 
+   
+    if(e.style.display=="block"){
+        window.location.hash="#"+lastTimeId;
+        setTimeout(()=>{
+            window.location.hash="";
+        },1000);
+    }
 }
 window.goRead=function(){
     // 创建一个URL对象
@@ -73,16 +94,18 @@ window.goRead=function(){
 function hook(){
     window.AjaxGet=ajaxget;
     ajaxget=function(...params){
-        window.AjaxGet(...params);
-        window.memu();
         document.querySelectorAll("#threadindex li").forEach(function(element) {
 
             if (element.onclick && element.getAttribute('onclick').includes(params[0])) {
                 localStorage.setItem("上次看到",element.textContent);
             }
         }); 
+        window.AjaxGet(...params);
+        window.memu();
+       
     }
 }
+//const api="http://127.0.0.1:5500";
 const api="https://whimsical-platypus-73f612.netlify.app";
 const readModel=api+'/myWork/Yuri300.css';
 const js=api+'/myWork/yuri300.js';
