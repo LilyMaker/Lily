@@ -148,12 +148,16 @@ window.purest=function(){
         
     }else{
        sessionStorage.setItem(key,true);
+       let isGo=false;
        document.querySelectorAll(".txtlist a").forEach((currentValue, index, array) => {
         if(currentValue.textContent=="只看楼主"){
             window.location.href=currentValue.href;
+            isGo=true;
         }
        
        });
+       if(!isGo)
+       location.reload(true);
        
     }
 }
