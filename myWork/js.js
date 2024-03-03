@@ -141,6 +141,7 @@ window.purest=function(){
     if(b=="true"){
         sessionStorage.setItem(key,false);
         location.reload(true);
+        location.hash="";
     }else{
        sessionStorage.setItem(key,true);
        document.querySelectorAll(".txtlist a").forEach((currentValue, index, array) => {
