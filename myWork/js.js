@@ -90,6 +90,68 @@ window.goRead=function(){
    
     
 }
+function uri(queryData){
+    let url = new URL(document.URL);
+
+    // 获取并解析查询字符串
+    let searchParams = new URLSearchParams(url.search);
+   
+    // 将查询参数转换为对象
+    let queryParamsObject = Object.fromEntries(searchParams.entries());
+    queryParamsObject={
+        ...queryParamsObject,
+        ...queryData
+    }
+    queryParamsObject=Object.entries(queryParamsObject);
+    let query=queryParamsObject.map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
+    .join('&');
+    let go="https://"+url.host+"?"+query; 
+    return go;
+}
+function queryMap(){
+    let url = new URL(document.URL);
+
+    // 获取并解析查询字符串
+    let searchParams = new URLSearchParams(url.search);
+   
+    // 将查询参数转换为对象
+    let queryParamsObject = Object.fromEntries(searchParams.entries());
+    return queryParamsObject;
+}
+function queryMapToUrl(query){
+    let url = new URL(document.URL);
+    url=url.href.substring(0,url.href.indexOf("?")+1);
+    query=Object.entries(query);
+    let str=query.map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
+    .join('&');
+    return url+str;
+}
+//清除回复
+function reply(){
+   let message=document.getElementsByClassName("message");
+   for(let i=0;i<message.length;i++){
+        if(message[i].querySelectorAll(".quote blockquote").length>0){
+            message[i].style.display="none";
+        }
+    }
+}
+window.purest=function(){
+    let key="purest";
+    let b=sessionStorage.getItem(key);
+    if(b=="true"){
+        sessionStorage.setItem(key,false);
+        location.reload();
+    }else{
+       sessionStorage.setItem(key,true);
+       document.querySelectorAll(".txtlist a").forEach((currentValue, index, array) => {
+        if(currentValue.textContent=="只看楼主"){
+            window.location.href=currentValue.href;
+        }
+       
+       });
+       
+    }
+}
 //修改ajaxget的功能
 function hook(){
     window.AjaxGet=ajaxget;
@@ -105,8 +167,8 @@ function hook(){
        
     }
 }
-//const api="http://127.0.0.1:5500";
-const api="https://whimsical-platypus-73f612.netlify.app";
+const api="http://127.0.0.1:5500";
+//const api="https://whimsical-platypus-73f612.netlify.app";
 const readModel=api+'/myWork/Yuri300.css';
 const js=api+'/myWork/yuri300.js';
 const start=function(){
@@ -136,7 +198,27 @@ const start=function(){
             textContent:"阅读模式",
             style:" color: white !important;"
         }
+    );
+    push(
+        ".header.cl .my",
+        {
+            type:"a",
+            href:"javascript:window.purest();",
+            textContent:sessionStorage.getItem("purest")=="true"?"关闭":"纯净模式",
+            style:" color: white !important;",
+            id:"purest"
+        }
     ) 
+    if(sessionStorage.getItem("purest")=="true"){
+        document.querySelectorAll(".txtlist a").forEach((currentValue, index, array) => {
+            if(currentValue.textContent=="只看楼主"){
+                window.location.href=currentValue.href;
+            }
+           
+        });
+        loadCss(api+"/myWork/purest.css");
+        reply();
+    }
     hook();
    }
 }

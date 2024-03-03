@@ -1,0 +1,6 @@
+.authi,.avatar,.threadlist_foot.cl,.psth.xs1,.pstatus,.foot_reply{
+    display: none !important;
+}
+[id^="comment_"],[id^="ratelog_"]{
+    display: none !important;
+}
