@@ -140,8 +140,9 @@ window.purest=function(){
     let b=sessionStorage.getItem(key);
     if(b=="true"){
         sessionStorage.setItem(key,false);
-        location.reload(true);
         location.hash="";
+        location.reload(true);
+        
     }else{
        sessionStorage.setItem(key,true);
        document.querySelectorAll(".txtlist a").forEach((currentValue, index, array) => {
