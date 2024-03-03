@@ -167,8 +167,8 @@ function hook(){
        
     }
 }
-const api="http://127.0.0.1:5500";
-//const api="https://whimsical-platypus-73f612.netlify.app";
+//const api="http://127.0.0.1:5500";
+const api="https://whimsical-platypus-73f612.netlify.app";
 const readModel=api+'/myWork/Yuri300.css';
 const js=api+'/myWork/yuri300.js';
 const start=function(){
