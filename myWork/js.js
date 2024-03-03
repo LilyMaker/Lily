@@ -140,8 +140,11 @@ window.purest=function(){
     let b=sessionStorage.getItem(key);
     if(b=="true"){
         sessionStorage.setItem(key,false);
-        location.hash="";
-        location.reload(true);
+        if(location.href.indexOf("#")>=0){
+            window.location.href= location.href.substring(0,location.href.indexOf("#"));
+        }else{
+             location.reload(true);
+        }
         
     }else{
        sessionStorage.setItem(key,true);
